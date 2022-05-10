@@ -1,1 +1,1 @@
-# cppProjectStarter
+rules of use: first argument is the path you want to create the files, second, third... is the name of the Classes you want to create. Will create also a main with include of classes and a simple makefile
