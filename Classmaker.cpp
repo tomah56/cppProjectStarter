@@ -3,13 +3,11 @@
 Classmaker::Classmaker( void )
 {
 	std::cout << "Classmaker Constructor called\n";
-	return;
 }
 
 Classmaker::~Classmaker( void )
 {
 	std::cout << "Classmaker Destructore called\n";
-	return;
 }
 
 static std::string make_upper(const std::string clasname)

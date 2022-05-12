@@ -5,6 +5,8 @@ First argument takes the path where you want to create the files. ("./" or "./an
 Second, third... is the name of the Classes you want to create. (as many as you can type)
 The app will also create a main with includes of classes and a simple makefile.
 
+-You have to create the folder.
+
 Example:
 
 ./makeclasses.out ./test FirstClass SecondClass NotLastClass
