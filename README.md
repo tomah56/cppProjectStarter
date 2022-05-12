@@ -1,4 +1,9 @@
-rules of use: first argument is the path you want to create the files, second, third... is the name of the Classes you want to create. Will create also a main with include of classes and a simple makefile.
+Simple classmaker for 42 cpp projects. I only finished my 00 so be gentle with judging the code :D
+
+How to use:
+First argument takes the path where you want to create the files. ("./" or "./anyfolder/here")
+Second, third... is the name of the Classes you want to create. (as many as you can type)
+The app will also create a main with includes of classes and a simple makefile.
 
 Example:
 
