@@ -30,7 +30,7 @@ static std::string make_upper(const std::string clasname)
 
 void Classmaker::setPath( const std::string &str )
 {
-	this->path = str;
+	this->path = str + "/";
 }
 
 const std::string	&Classmaker::getpath() const
@@ -81,6 +81,11 @@ void Classmaker::createClass( const std::string &clasname ) const
 	std::ofstream cppfile;
 	std::ofstream hppfile;
 	cppfile.open (this->getpath() + clasname + ".cpp");
+	if ( cppfile.fail() )
+	{
+		std::cout << "Error: Failed to create file!";
+		exit(1);
+	}
 	cppfile	<<	"#include \""	<<	clasname	<<	".hpp\""					<<	std::endl
 																				<<	std::endl
 			<<	clasname	<<	"::"	<< clasname	<< "( void )"				<<	std::endl

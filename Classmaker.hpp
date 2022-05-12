@@ -7,7 +7,6 @@
 
 class Classmaker {
 public:
-	// Classmaker( const std::string &clasname );
 	Classmaker( void );
 	~Classmaker( void );
 	const std::string	&getpath() const;
