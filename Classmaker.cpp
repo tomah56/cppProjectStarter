@@ -89,13 +89,11 @@ void Classmaker::createClass( const std::string &clasname ) const
 			<<	clasname	<<	"::"	<< clasname	<< "( void )"				<<	std::endl
 			<<	"{"																<<	std::endl
 			<<	"\tstd::cout << \"" << clasname << " Constructor called\\n\";"	<<	std::endl
-			<<	"\treturn ;"													<<	std::endl
 			<<	"}"																<<	std::endl
 																				<<	std::endl
 			<<	clasname	<<	"::~" << clasname << "( void )"					<<	std::endl
 			<<	"{"																<<	std::endl
 			<<	"\tstd::cout << \"" << clasname << " Destructor called\\n\";"	<<	std::endl
-			<<	"\treturn ;"													<<	std::endl
 			<<	"}"																<<	std::endl
 			;
 	cppfile.close();
