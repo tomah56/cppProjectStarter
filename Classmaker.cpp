@@ -88,12 +88,29 @@ void Classmaker::createClass( const std::string &clasname ) const
 																				<<	std::endl
 			<<	clasname	<<	"::"	<< clasname	<< "( void )"				<<	std::endl
 			<<	"{"																<<	std::endl
-			<<	"\tstd::cout << \"" << clasname << " Constructor called\\n\";"	<<	std::endl
+			<<	"\tstd::cout << \"" << clasname << "Default Constructor called\\n\";"	<<	std::endl
+			<<	"}"																<<	std::endl
+																				<<	std::endl
+			<<	clasname	<<	"::"	<< clasname	<< "( ... )"				<<	std::endl
+			<<	"{"																<<	std::endl
+			<<	"\tstd::cout << \"" << clasname << " With arguments consturctor called\\n\";"	<<	std::endl
+			<<	"}"																<<	std::endl
+																				<<	std::endl
+			<<	clasname	<<	"::"	<< clasname	<< "( " << clasname <<" const &object)"	<<	std::endl
+			<<	"{"																<<	std::endl
+			<<	"\tstd::cout << \"" << clasname << " Copy consturctor called\\n\";"	<<	std::endl
 			<<	"}"																<<	std::endl
 																				<<	std::endl
 			<<	clasname	<<	"::~" << clasname << "( void )"					<<	std::endl
 			<<	"{"																<<	std::endl
 			<<	"\tstd::cout << \"" << clasname << " Destructor called\\n\";"	<<	std::endl
+			<<	"}"																<<	std::endl
+																				<<	std::endl
+			<<	clasname	<<	"	&"	<< clasname	<< "::operator=( " << clasname <<" const &object)"	<<	std::endl
+			<<	"{"																<<	std::endl
+			<<	"\tstd::cout << \"" << clasname << " Copy Assigment operator called\\n\";"	<<	std::endl
+																		<<	std::endl
+			<<	"	return ( *this );"																<<	std::endl
 			<<	"}"																<<	std::endl
 			;
 	cppfile.close();
@@ -105,10 +122,13 @@ void Classmaker::createClass( const std::string &clasname ) const
 			<< "class "		<< clasname << " {"		<<	std::endl
 			<< "public:"							<<	std::endl
 			<< "\t"	<<	clasname	<< "( void );"	<<	std::endl
+			<< "\t"	<<	clasname	<< "( );"	<<	std::endl
+			<< "\t"	<<	clasname	<< "( "<< clasname << " const &object );"	<<	std::endl
 			<<	"\t~"	<< clasname	<< "( void );"	<<	std::endl
+			<< std::endl
+			<< "\t" << clasname << "	&operator=( " << clasname << " const &object );" << std::endl
 			<<	"private:"							<<	std::endl
 			<<	"};"								<<	std::endl
-													<<	std::endl
 			<<	"#endif"							<<	std::endl
 			;
 	hppfile.close();

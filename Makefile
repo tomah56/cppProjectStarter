@@ -1,5 +1,5 @@
 CC := c++
-NAME := makeclasses.out
+NAME := canoniClassMaker
 FLAGS := -Wall -Wextra -Werror
 SRC := main.cpp Classmaker.cpp
 HEADERS := Classmaker.hpp 
